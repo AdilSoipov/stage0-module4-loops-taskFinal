@@ -5,7 +5,7 @@ public class Pyramid {
  
 int i = 1;
 int space = 1; // distance between two adjacent digits
-int width = 2 * space * (cathetusLength - 2) + 1; // 0 not included
+int width = 2 * space * (cathetusLength - 2) + 3; // 0 not included
 
 StringBuilder sb = new StringBuilder();
 while (i++ <= width) {
@@ -15,7 +15,7 @@ while (i++ <= width) {
 i = 0;
 int left = width / 2;
 int right = width / 2;
-while (i++ < cathetusLength - 1) { // print 1..8
+while (i++ < cathetusLength ) { // print 1..8
     sb.setCharAt(left, (char)(i + '0'));
     sb.setCharAt(right, (char)(i + '0'));
     System.out.println(sb);
