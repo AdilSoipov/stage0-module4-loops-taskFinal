@@ -3,42 +3,31 @@ package school.mjc.stage0.loops.finalTask;
 public class Pyramid {
     public void printPyramid(int cathetusLength) {
        
- 
-        int rowCount = 1;
- 
-        System.out.println("Here Is Your Pyramid");
- 
-        //Implementing the logic
- 
-        for (int i = cathetusLength; i > 0; i--)
+   int i = 1;
+
+   while (i <= cathetusLength)
+    {
+        int j = 1;
+        while (j<=(cathetusLength-i)*2)
         {
-            //Printing i*2 spaces at the beginning of each row
- 
-            for (int j = 1; j <= i*2; j++)
-            {
-                System.out.print(" ");
-            }
- 
-            //Printing j value where j value will be from 1 to rowCount
- 
-            for (int j = 1; j <= rowCount; j++)          
-            {
-                System.out.print(j+" ");
-            }
- 
-            //Printing j value where j value will be from rowCount-1 to 1
-             
-            for (int j = rowCount-1; j >= 1; j--)
-            {               
-                System.out.print(j+" ");            
-            }                       
-             
-            System.out.println();
- 
-            //Incrementing the rowCount
- 
-            rowCount++;
+            System.out.print(" ");
+            j++;
         }
+        int k = i;
+        while (k >= 1)
+        {
+            System.out.print(" "+k);
+            k--;
+        }
+        int l = 2;
+        while (l<=i)
+        {
+            System.out.print(" "+l);
+            l++;
+        }
+        System.out.println();
+        i++;
+    }
 
     }
 
