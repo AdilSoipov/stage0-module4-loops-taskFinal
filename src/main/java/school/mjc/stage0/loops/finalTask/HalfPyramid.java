@@ -27,7 +27,7 @@ public class HalfPyramid {
              
             // ending line after each row
             System.out.println();
-        }
+        
     }
 
     }
