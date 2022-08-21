@@ -2,6 +2,16 @@ package school.mjc.stage0.loops.finalTask;
 
 public class Power {
     public void printPower(int numberToPrint, int power) {
+     
+
+    long result = 1;
+
+    while (power != 0) {
+      result *= numberToPrint;
+      --power;
+    }
+
+    System.out.println(result);
 
     }
 
