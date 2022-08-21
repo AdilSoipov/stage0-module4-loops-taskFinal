@@ -2,32 +2,26 @@ package school.mjc.stage0.loops.finalTask;
 
 public class Pyramid {
     public void printPyramid(int cathetusLength) {
-       
-   int i = 1;
+ 
+int i = 1;
+int space = 1; // distance between two adjacent digits
+int width = 2 * space * (cathetusLength - 2) + 1; // 0 not included
 
-   while (i <= cathetusLength)
-    {
-        int j = 1;
-        while (j<=(cathetusLength-i)*2)
-        {
-            System.out.print(" ");
-            j++;
-        }
-        int k = i;
-        while (k >= 1)
-        {
-            System.out.print(" "+k);
-            k--;
-        }
-        int l = 2;
-        while (l<=i)
-        {
-            System.out.print(" "+l);
-            l++;
-        }
-        System.out.println();
-        i++;
-    }
+StringBuilder sb = new StringBuilder();
+while (i++ <= width) {
+    sb.append(' ');  // prepare StringBuilder with whitespaces
+}
+
+i = 0;
+int left = width / 2;
+int right = width / 2;
+while (i++ < cathetusLength - 1) { // print 1..8
+    sb.setCharAt(left, (char)(i + '0'));
+    sb.setCharAt(right, (char)(i + '0'));
+    System.out.println(sb);
+    left -= space;
+    right += space;
+}
 
     }
 
