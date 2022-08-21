@@ -2,7 +2,8 @@ package school.mjc.stage0.loops.finalTask;
 
 public class HalfPyramid {
     public void printHalfPyramid(int cathetusLength) {
-           int i, j;
+  int i, j;
+   
  
         // outer loop to handle number of rows
         //  n in this case
@@ -22,7 +23,7 @@ public class HalfPyramid {
             for(j=0; j<=i; j++)
             {
                 // printing stars
-                System.out.print("* ");
+                System.out.print("*");
             }
              
             // ending line after each row
